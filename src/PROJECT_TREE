@@ -1,0 +1,112 @@
+com.Abdelaziz26.Booking/
+├── Auth/
+│   ├── Commands/
+│   │   ├── ConfirmEmailCommand
+│   │   ├── LoginCommand
+│   │   ├── RefreshTokenCommand
+│   │   ├── RegisterCommand
+│   │   ├── ResendConfirmationCodeCommand
+│   │   └── ResetPasswordCommand
+│   ├── Controllers/
+│   │   ├── AuthController
+│   │   └── RoleController
+│   ├── Entities/
+│   │   ├── Role
+│   │   ├── User
+│   │   └── VerificationCode
+│   ├── Handlers/
+│   │   ├── ConfirmEmailHandler
+│   │   ├── LoginHandler
+│   │   ├── RefreshTokenHandler
+│   │   ├── RegisterHandler
+│   │   └── ResetPasswordHandler
+│   └── Repositories/
+│       ├── RoleRepository
+│       └── UserRepository
+
+├── BookRoom/
+│   ├── BookRoomCommand
+│   ├── BookRoomController
+│   ├── Booking
+│   ├── BookingHandler
+│   └── BookingRepository
+
+├── CancelBooking/
+│   ├── CancelBookingCommand
+│   ├── CancelBookingController
+│   ├── CancelBookingHandler
+│   └── CancelBookingRepository
+
+├── GetAvailableHotels/
+│   ├── GetHotelsHandler
+│   ├── GetHotelsQuery
+│   ├── HotelsListingController
+│   └── HotelsListingRepository
+
+├── GetAvailableRooms/
+│   ├── GetRoomsHandler
+│   ├── GetRoomsQuery
+│   ├── RoomsListingController
+│   └── RoomsListingRepository
+
+├── GetLocation/
+│   ├── Controller/
+│   │   └── LocationController
+│   ├── Handlers/
+│   │   ├── GetMyLocationHandler
+│   │   └── SearchLocationHandler
+│   ├── Queries/
+│   │   ├── GetMyLocationQuery
+│   │   └── SearchLocationQuery
+│   ├── Repository/
+│   │   └── LocationRepository
+│   └── Services/
+│       └── MapsService  
+
+├── ManageHotels/  
+│   ├── AddHotelCommand
+│   ├── Hotel
+│   ├── HotelController
+│   ├── HotelHandler
+│   ├── HotelRepository
+│   ├── RemoveHotelCommand
+│   └── UpdateHotelCommand
+
+├── ManageRooms/  
+│   ├── AddRoomCommand
+│   ├── RemoveRoomCommand
+│   ├── Room
+│   ├── RoomController
+│   ├── RoomHandler
+│   ├── RoomRepository
+│   └── UpdateRoomCommand
+
+├── ProcessPayment/  
+│   ├── Payment
+│   ├── PaymentController
+│   ├── PaymentGatewayClient
+│   ├── PaymentRepository
+│   ├── ProcessPaymentCommand
+│   └── ProcessPaymentHandler
+
+├── RefundPayment/  
+│   ├── ProcessRefundCommand
+│   ├── ProcessRefundController
+│   ├── ProcessRefundHandler
+│   └── ProcessRefundRepo
+
+├── Reviews/
+│   ├── Review
+│   ├── ReviewCommand
+│   ├── ReviewController
+│   ├── ReviewHandler
+│   └── ReviewRepository
+
+└── Shared/
+    ├── ApplicationConfig
+    ├── Entities/
+    ├── Enums/
+    ├── Exceptions/
+    ├── JWT/
+    ├── BookingApplication
+    └── resources/
