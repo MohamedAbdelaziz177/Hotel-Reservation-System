@@ -1,0 +1,47 @@
+
+services:
+  db:
+    container_name: db
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=Booking
+    ports:
+      - "5432:5432"
+    volumes:
+      - bookingDb:/var/lib/postgresql/data
+    networks:
+      - spring-boot-network
+    restart: unless-stopped
+
+  pgAdmin:
+    image: dpage/pgadmin4
+    container_name: pg_admin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=mohamecabdelaziz66@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=1234
+    ports:
+      - "5050:80"
+    networks:
+      - spring-boot-network
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  #spring_app:
+  # container_name: spring-app
+  # image: spring/demo
+  # ports:
+  #   - "8080:8080"
+  # networks:
+  #   - spring-boot-network
+
+volumes:
+  bookingDb:
+
+networks:
+  spring-boot-network:
+      driver: bridge
+
+
